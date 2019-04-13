@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "swellaby.common-pack",
-    "Remisa.shellman"
+    "Remisa.shellman",
+    "ms-azure-devops.azure-pipelines"
   ]
 }
