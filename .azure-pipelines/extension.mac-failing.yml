@@ -1,0 +1,16 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: macos-10.14
+
+steps:
+- task: swellaby.shellcheck.install-shellcheck.install-shellcheck@0
+  displayName: 'Install ShellCheck'
+  inputs:
+    version: stable
+
+- task: swellaby.shellcheck.shellcheck.shellcheck@0
+  displayName: 'Run ShellCheck analysis'
+  inputs:
+    targetFiles: 'failing/**/*.sh'
