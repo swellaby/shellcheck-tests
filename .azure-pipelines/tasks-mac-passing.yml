@@ -1,0 +1,13 @@
+pool:
+  vmImage: macos-10.14
+
+steps:
+- task: install-shellcheck@0
+  displayName: 'Install ShellCheck'
+  inputs:
+    version: stable
+
+- task: shellcheck@0
+  displayName: 'Run ShellCheck analysis'
+  inputs:
+    targetFiles: 'passing/**/*.sh'

@@ -1,5 +1,6 @@
 pool:
-  name: Hosted macOS
+  vmImage: vs2017-win2016
+
 steps:
 - task: install-shellcheck@0
   displayName: 'Install ShellCheck'
