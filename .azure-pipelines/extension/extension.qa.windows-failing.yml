@@ -1,0 +1,16 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: vs2017-win2016
+
+steps:
+- task: swellaby-private-extension-validation.shellcheck-private.install-shellcheck.install-shellcheck@0
+  displayName: 'Install ShellCheck'
+  inputs:
+    version: stable
+
+- task: swellaby-private-extension-validation.shellcheck-private.shellcheck.shellcheck@0
+  displayName: 'Run ShellCheck analysis'
+  inputs:
+    targetFiles: 'failing/**/*.sh'
